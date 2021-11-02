@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1> {%block title %} Área de doação: Relação de Cadastrados {% endblock %}</h1>
+<br>
+<!-- <form method="get">
+    <div class="form-group w3-center">
+        <label for="bairro">Filtro: Digite o seu Bairro e a Cidade</label><br>
+        <input type="text" name="bairro" placeholder="Bairro" class="textbox-control" value="{{ request.form['bairro'] }}">
+    </div>
+
+    <div class="form-group w3-center">
+        <input name="cidade" placeholder="Cidade" class="textbox-control">{{ request.form['cidade'] }}
+    </div>
+    <div class="form-group w3-center">
+        <button type="submit" class="btn btn-primary">Filtar</button>
+    </div>
+</form>
+-->
+<br>
+    {% for post in posts %}
+        <a href="{{ url_for('post', post_id=post['id'])}}">
+            <h5>Nome: {{ post['nome'] }}</h5>
+            <p>Bairro: {{ post['bairro'] }}</p>
+            <p>Cidade: {{ post['cidade'] }}</p>
+            <p>Contato:{{ post['email'] }}</p>
+        </a>
+        <hr>
+    {% endfor %}
+{% endblock %}
