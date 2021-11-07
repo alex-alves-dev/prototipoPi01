@@ -69,8 +69,4 @@ def cadastrar():
 def doar():
     posts = Posts.query.all()
     return render_template('doar.html', posts=posts)
-def filtro():
-    if request.method == 'GET':
-       db.query.filter(db.bairro.endswith('@example.com')).all()
-       return render_template('filtro.html', posts=posts)
 
