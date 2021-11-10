@@ -2,7 +2,8 @@
 
 {% block content %}
 <br>
-<p class="w3-large">Para fazer o contato com o responsável de Aplv que irá receber, clique no e-mail.</p>
-    <h2>{% block title %} {{ post['nome'] }} {% endblock %}</h2>
-    <p><a href="mailto:{{ post['email'] }}"> {{ post['email'] }} </a></p>
+<p class="w3-large"><h3>Para fazer o contato com o responsável da criança Aplv que irá receber a fórmula, clique no e-mail.</h3></p>
+<hr>
+<h2 class="w3-center">{% block title %} {{ post['nome'] }} {% endblock %}</h2>
+    <p class="w3-center"><a href="mailto:{{ post['email'] }}"> {{ post['email'] }} </a></p>
 {% endblock %}
